@@ -31,7 +31,7 @@ const ProfileCard = () => {
                 <div className="font-medium w-full text-foreground flex items-center justify-start gap-1">
                     <p className="inline text-base">I build </p>
                     <div className="inline-block">
-                        <MorphingText texts={texts} className='h-5 text-lg inline-flex whitespace-nowrap items-start dark:text-foreground text-black' />
+                        <MorphingText texts={texts} className='h-5 text-lg inline-flex whitespace-nowrap items-start dark:text-foreground text-white' />
                     </div>
                 </div>
                 <div className="w-full text-foreground">
@@ -45,7 +45,7 @@ const ProfileCard = () => {
             </div>
             <div className='flex justify-between items-center'>
                 <div className="flex items-center justify-center gap-2 text-sm font-mono text-zinc-500 font-light tracking-wider">
-                    <p className="hidden sm:block text-xs font-mono text-black/70 dark:text-zinc-400/70 tracking-tighter">
+                    <p className="hidden sm:block text-xs font-mono text-white/70 dark:text-zinc-400/70 tracking-tighter">
                         {`I automated the boring parts so well,`}<br />{`I had time to automate the fun parts too.`}
                     </p>
                 </div>

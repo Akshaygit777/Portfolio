@@ -1,12 +1,12 @@
 import React, { Dispatch, SetStateAction, useEffect, useState, useRef } from "react";
-import { motion, useMotionValue } from "framer-motion";
+import { motion, useMotionValue, cubicBezier } from "framer-motion";
 
 const ONE_SECOND = 1000;
 const AUTO_DELAY = ONE_SECOND * 10;
 const DRAG_BUFFER = 50;
 
-// easeInOutQuart easing function
-const easeInOutQuart = [0.76, 0, 0.24, 1];
+// easeInOutQuart easing function using cubicBezier
+const easeInOutQuart = cubicBezier(0.76, 0, 0.24, 1);
 
 const TRANSITION_OPTIONS = {
     duration: 1.5,
@@ -147,18 +147,6 @@ const Images = ({
                             controls
                         />
                     ) : (
-                        // <img
-                        //   className="w-full h-full object-contain rounded-lg"
-                        //   src={item.src}
-                        //   alt={`Media ${idx + 1}`}
-                        //   style={{
-                        //     backgroundSize: "contain",
-                        //     backgroundRepeat: "no-repeat",
-                        //     backgroundPosition: "center",
-                        //   }}
-                        //   loading="lazy"
-                        // />
-
                         <motion.div
                             key={idx}
                             style={{
@@ -168,9 +156,6 @@ const Images = ({
                                 backgroundPosition: "center",
                                 borderRadius: "4px"
                             }}
-                            // animate={{
-                            //     scale: imgIndex === idx ? 0.95 : 0.85,
-                            // }}
                             transition={TRANSITION_OPTIONS}
                             className=" w-full h-full shrink-0 rounded-lg"
                         />
